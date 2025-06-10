@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Primitive color variables */
+  --neutral-white: #FFFFFF;
+  --neutral-lightest: #F2F2F2;
+  --neutral-lighter: #D8D8D8;
+  --neutral-light: #B2B2B2;
+  --neutral: #7F7F7F;
+  --neutral-dark: #4C4C4C;
+  --neutral-darker: #191919;
+  --neutral-darkest: #000000;
+
+  --capecod-lightest: #EBECEC;
+  --capecod-lighter: #D7DAD9;
+  --capecod-light: #757E7C;
+  --capecod: #3A4744;
+  --capecod-dark: #2E3836;
+  --capecod-darker: #171C1B;
+  --capecod-darkest: #111514;
+
+  /* Semantic color variables */
+  --color-text-primary: var(--neutral-darker);
+  --color-text-inverse: var(--neutral-white);
+  --color-background-primary: var(--neutral-lightest);
+  --color-background-inverse: var(--neutral-darker);
+  --color-border: var(--neutral-lighter);
+  --color-border-strong: #19191926; /* neutral-darker with 15% opacity */
+  --color-accent: var(--capecod);
+  --color-accent-light: var(--capecod-lightest);
+  --color-accent-dark: var(--capecod-dark);
+
+  --font-merriweather: var(--font-merriweather);
+  --font-pt-sans: var(--font-pt-sans);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Inline custom color variables for Tailwind v4 */
+  --neutral-white: #FFFFFF;
+  --neutral-lightest: #F2F2F2;
+  --neutral-lighter: #D8D8D8;
+  --neutral-light: #B2B2B2;
+  --neutral: #7F7F7F;
+  --neutral-dark: #4C4C4C;
+  --neutral-darker: #191919;
+  --neutral-darkest: #000000;
+
+  --capecod-lightest: #EBECEC;
+  --capecod-lighter: #D7DAD9;
+  --capecod-light: #757E7C;
+  --capecod: #3A4744;
+  --capecod-dark: #2E3836;
+  --capecod-darker: #171C1B;
+  --capecod-darkest: #111514;
+
+  --color-text-primary: var(--neutral-darker);
+  --color-text-inverse: var(--neutral-white);
+  --color-background-primary: var(--neutral-lightest);
+  --color-background-inverse: var(--neutral-darker);
+  --color-border: var(--neutral-lighter);
+  --color-border-strong: #19191926;
+  --color-accent: var(--capecod);
+  --color-accent-light: var(--capecod-lightest);
+  --color-accent-dark: var(--capecod-dark);
+
+  --font-merriweather: var(--font-merriweather);
+  --font-pt-sans: var(--font-pt-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
