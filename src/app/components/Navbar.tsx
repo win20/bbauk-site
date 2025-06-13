@@ -24,23 +24,26 @@ export default function Navbar() {
           Bangladesh Buddhist Association UK
         </span>
 
-        {open ? (
-          <button
-            className="text-3xl focus:outline-none sm:hidden"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          >
-            <MdClose size={24} />
-          </button>
-        ) : (
-          <button
-            className="text-3xl focus:outline-none sm:hidden"
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
-          >
-            <MdMenu size={24} />
-          </button>
-        )}
+        <button
+          className="text-3xl focus:outline-none sm:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen(!open)}
+        >
+          <div className="relative h-6 w-6">
+            <MdMenu
+              size={24}
+              className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+                open ? "scale-75 rotate-180 opacity-0" : "scale-100 rotate-0 opacity-100"
+              }`}
+            />
+            <MdClose
+              size={24}
+              className={`absolute inset-0 transition-all duration-300 ease-in-out ${
+                open ? "scale-100 rotate-0 opacity-100" : "scale-75 -rotate-180 opacity-0"
+              }`}
+            />
+          </div>
+        </button>
 
         {/* Desktop nav */}
         <nav className="ml-8 hidden gap-8 sm:flex">
