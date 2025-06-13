@@ -1,0 +1,90 @@
+"use client";
+
+import React, { useState } from "react";
+import { MdMenu, MdClose } from "react-icons/md";
+
+const navLinks = [
+  { label: "Home", href: "#" },
+  { label: "About Us", href: "#" },
+  { label: "Events", href: "#" },
+  { label: "Gallery", href: "#" },
+  { label: "Donations", href: "#" },
+  { label: "Contact", href: "#" },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="relative w-full">
+      {/* Top bar always visible */}
+      <div className="flex items-center justify-between bg-[var(--capecod)] px-6 py-4 text-[var(--color-text-inverse)]">
+        <span className="font-poppins text-sm leading-none font-extrabold tracking-wide">
+          Bangladesh Buddhist Association UK
+        </span>
+
+        {open ? (
+          <button
+            className="text-3xl focus:outline-none sm:hidden"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            <MdClose size={24} />
+          </button>
+        ) : (
+          <button
+            className="text-3xl focus:outline-none sm:hidden"
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+          >
+            <MdMenu size={24} />
+          </button>
+        )}
+
+        {/* Desktop nav */}
+        <nav className="ml-8 hidden gap-8 sm:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-base font-[var(--font-pt-sans)] text-[var(--color-text-inverse)] hover:underline"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      {/* Mobile dropdown nav */}
+      <nav
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-[var(--capecod)] pb-8 text-[var(--color-text-inverse)] transition-all duration-300 ease-in-out sm:hidden ${
+          open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
+        }`}
+        aria-label="Mobile navigation"
+      >
+        <ul className="flex flex-col gap-8 px-6 pt-8">
+          {navLinks.map((link, index) => (
+            <li
+              key={link.label}
+              className={`transition-all duration-300 ease-in-out ${
+                open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+              }`}
+              style={{
+                transitionDelay: open ? `${index * 50}ms` : "0ms",
+              }}
+            >
+              <a
+                href={link.href}
+                className="text-base font-[var(--font-pt-sans)] text-[var(--color-text-inverse)] hover:underline"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+}

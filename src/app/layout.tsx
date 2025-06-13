@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
-import { Merriweather, PT_Sans } from "next/font/google";
+import { Merriweather, PT_Sans, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/app/components/Navbar";
 
 const merriweather = Merriweather({
   variable: "--font-merriweather",
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '700', '900'],
-})
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "700", "900"],
+});
 
 const ptSans = PT_Sans({
   variable: "--font-pt-sans",
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '700'],
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ptSans.variable} ${merriweather.variable} antialiased`}>{children}</body>
+      <body
+        className={`${ptSans.variable} ${merriweather.variable} ${poppins.variable} antialiased`}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
