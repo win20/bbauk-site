@@ -5,21 +5,21 @@
   --foreground: #171717;
 
   /* Primitive color variables */
-  --neutral-white: #FFFFFF;
-  --neutral-lightest: #F2F2F2;
-  --neutral-lighter: #D8D8D8;
-  --neutral-light: #B2B2B2;
-  --neutral: #7F7F7F;
-  --neutral-dark: #4C4C4C;
+  --neutral-white: #ffffff;
+  --neutral-lightest: #f2f2f2;
+  --neutral-lighter: #d8d8d8;
+  --neutral-light: #b2b2b2;
+  --neutral: #7f7f7f;
+  --neutral-dark: #4c4c4c;
   --neutral-darker: #191919;
   --neutral-darkest: #000000;
 
-  --capecod-lightest: #EBECEC;
-  --capecod-lighter: #D7DAD9;
-  --capecod-light: #757E7C;
-  --capecod: #3A4744;
-  --capecod-dark: #2E3836;
-  --capecod-darker: #171C1B;
+  --capecod-lightest: #ebecec;
+  --capecod-lighter: #d7dad9;
+  --capecod-light: #757e7c;
+  --capecod: #3a4744;
+  --capecod-dark: #2e3836;
+  --capecod-darker: #171c1b;
   --capecod-darkest: #111514;
 
   /* Semantic color variables */
@@ -44,21 +44,21 @@
   --font-mono: var(--font-geist-mono);
 
   /* Inline custom color variables for Tailwind v4 */
-  --neutral-white: #FFFFFF;
-  --neutral-lightest: #F2F2F2;
-  --neutral-lighter: #D8D8D8;
-  --neutral-light: #B2B2B2;
-  --neutral: #7F7F7F;
-  --neutral-dark: #4C4C4C;
+  --neutral-white: #ffffff;
+  --neutral-lightest: #f2f2f2;
+  --neutral-lighter: #d8d8d8;
+  --neutral-light: #b2b2b2;
+  --neutral: #7f7f7f;
+  --neutral-dark: #4c4c4c;
   --neutral-darker: #191919;
   --neutral-darkest: #000000;
 
-  --capecod-lightest: #EBECEC;
-  --capecod-lighter: #D7DAD9;
-  --capecod-light: #757E7C;
-  --capecod: #3A4744;
-  --capecod-dark: #2E3836;
-  --capecod-darker: #171C1B;
+  --capecod-lightest: #ebecec;
+  --capecod-lighter: #d7dad9;
+  --capecod-light: #757e7c;
+  --capecod: #3a4744;
+  --capecod-dark: #2e3836;
+  --capecod-darker: #171c1b;
   --capecod-darkest: #111514;
 
   --color-text-primary: var(--neutral-darker);
@@ -73,6 +73,7 @@
 
   --font-merriweather: var(--font-merriweather);
   --font-pt-sans: var(--font-pt-sans);
+  --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
