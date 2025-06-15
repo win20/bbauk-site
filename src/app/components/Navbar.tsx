@@ -17,8 +17,8 @@ export default function Navbar() {
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative w-full">
-      {/* Top bar always visible */}
+    <header className="sticky top-0 z-50 w-full">
+      {/* Navigation bar */}
       <div className="flex items-center justify-between bg-[var(--capecod)] px-6 py-4 text-[var(--color-text-inverse)]">
         <span className="font-poppins text-sm leading-none font-extrabold tracking-wide">
           Bangladesh Buddhist Association UK
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-[var(--capecod)] pb-8 text-[var(--color-text-inverse)] transition-all duration-300 ease-in-out sm:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-[var(--capecod)] pb-8 text-[var(--color-text-inverse)] shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"
