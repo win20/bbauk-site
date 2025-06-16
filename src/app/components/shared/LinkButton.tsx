@@ -21,7 +21,7 @@ export default function LinkButton({
     outlined:
       "border-2 border-white bg-transparent text-white hover:bg-white hover:text-[var(--capecod)]",
     elevated:
-      "bg-white text-[var(--capecod)] hover:bg-gray-100 shadow-md border-b-4 border-[#D8D8D8]",
+      "bg-white text-[var(--capecod)] hover:bg-gray-100 shadow-md border-b-4 border-gray-800/30",
   };
 
   const mergedClassName = twMerge(baseStyles, variantStyles[variant], className);
