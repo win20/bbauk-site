@@ -2,7 +2,7 @@ import HeroSection from "./components/hero-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] font-pt-sans">
       <HeroSection />
     </div>
   );
