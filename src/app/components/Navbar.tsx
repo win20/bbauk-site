@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 
 const navLinks = [
@@ -14,12 +14,34 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Navigation bar */}
-      <div className="flex items-center justify-between bg-[var(--capecod)] px-6 py-4 text-[var(--color-text-inverse)]">
+      <div className="relative flex items-center justify-between bg-[var(--capecod)] px-6 py-4 text-[var(--color-text-inverse)]">
+        {/* Animated bottom line */}
+        <div
+          className={`absolute bottom-0 left-0 h-px bg-white/10 ${
+            isScrolled ? "w-full opacity-100" : "w-0 opacity-0"
+          }`}
+          style={{
+            transition:
+              "width 500ms cubic-bezier(0.4,0,0.2,1), opacity 300ms cubic-bezier(0.4,0,0.2,1)",
+            transitionDelay: "0ms, 0ms",
+          }}
+        />
+
         <span className="font-poppins text-sm leading-none font-extrabold tracking-wide">
           Bangladesh Buddhist Association UK
         </span>
