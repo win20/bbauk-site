@@ -5,10 +5,11 @@ import Image from "next/image";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 
 export default function HeroSection() {
+  const { ref: eventRef, isVisible: eventVisible } = useScrollFadeIn(0.3, "0px", 300);
   const { ref: titleRef, isVisible: titleVisible } = useScrollFadeIn(0.1, "0px", 0);
   const { ref: descRef, isVisible: descVisible } = useScrollFadeIn(0.1, "0px", 150);
   const { ref: buttonsRef, isVisible: buttonsVisible } = useScrollFadeIn(0.1, "0px", 300);
-  const { ref: eventRef, isVisible: eventVisible } = useScrollFadeIn(0.3, "0px", 450);
+  const { ref: imageRef, isVisible: imageVisible } = useScrollFadeIn(0.2, "0px", 100);
 
   return (
     <section className="w-full bg-[var(--capecod)] text-white">
@@ -16,16 +17,16 @@ export default function HeroSection() {
         <div className="mx-auto max-w-4xl space-y-6 text-left">
           <h1
             ref={titleRef}
-            className={`font-merriweather text-4xl font-bold transition-all duration-800 ease-out ${
-              titleVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            className={`font-merriweather text-4xl font-bold transition-all duration-500 ease-in-out ${
+              titleVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
             }`}
           >
             Our Story
           </h1>
           <p
             ref={descRef}
-            className={`font-pt-sans text-base leading-relaxed transition-all duration-800 ease-out ${
-              descVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            className={`font-pt-sans text-base leading-relaxed transition-all duration-500 ease-in-out ${
+              descVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
             }`}
           >
             The Bangladesh Buddhist Association UK is dedicated to promoting Buddhist values,
@@ -34,8 +35,10 @@ export default function HeroSection() {
           </p>
           <div
             ref={buttonsRef}
-            className={`flex justify-start gap-4 pt-2 transition-all duration-800 ease-out ${
-              buttonsVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            className={`flex justify-start gap-4 pt-2 transition-all duration-800 ease-in-out ${
+              buttonsVisible
+                ? "blur-0 translate-y-0 opacity-100"
+                : "translate-y-6 opacity-0 blur-sm"
             }`}
           >
             <LinkButton href="/about" variant="elevated">
@@ -52,21 +55,28 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative h-[380px] w-full md:h-80 lg:h-96">
+      <div
+        ref={imageRef}
+        className={`relative h-[380px] w-full overflow-hidden transition-all duration-1000 ease-out md:h-80 lg:h-96 ${
+          imageVisible ? "scale-100 opacity-100" : "scale-105 opacity-0"
+        }`}
+      >
         <div
           ref={eventRef}
           className={`absolute top-3 left-4 z-10 text-sm text-white transition-all duration-700 ease-out ${
-            eventVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            eventVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-4 opacity-0 blur-sm"
           }`}
         >
           <p className="pb-1 font-bold">Next Event</p>
-          <p>Katina Ceremony - 14 April - Plaistow Temple</p>
+          <p>Katina Ceremony &middot; 14 April &middot; Plaistow Temple</p>
         </div>
         <Image
           src="/hero-buddha.jpg"
-          alt="Image of a Buddha statue in a forest"
+          alt="Hero Image"
           fill
-          className="object-cover"
+          className={`object-cover transition-transform duration-[1200ms] ease-out ${
+            imageVisible ? "scale-100" : "scale-110"
+          }`}
           style={{ objectPosition: "60%" }}
           priority
         />
