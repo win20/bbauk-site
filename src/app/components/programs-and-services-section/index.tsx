@@ -1,8 +1,23 @@
 import LinkButton from "@components/shared/LinkButton";
-import CroppedImage from "../shared/CroppedImage";
+import CroppedImage from "@components/shared/CroppedImage";
 import ProgramsAndServicesItem from "@components/programs-and-services-section/ProgramAndServiceItem";
 
 export default function ProgramsAndServicesSection() {
+  const programsAndServices = [
+    {
+      title: "Meditation and Mindfulness",
+      body: "Join our guided meditation sessions to cultivate peace and mindfulness in your daily life.",
+    },
+    {
+      title: "Cultural Events",
+      body: "Participate in our cultural events to celebrate and share our rich Buddhist heritage with others.",
+    },
+    {
+      title: "Dharma Talks and Teachings",
+      body: "Our teachers discuss key Buddhist concepts like suffering, impermanence, and the path to enlightenment through insightful Dharma talks.",
+    },
+  ];
+
   return (
     <section className="bg-[var(--neutral-lightest)] px-6 py-16 text-gray-950">
       <h3 className="mb-4 text-base font-bold">Services</h3>
@@ -22,20 +37,9 @@ export default function ProgramsAndServicesSection() {
         priority
       />
 
-      <ProgramsAndServicesItem
-        title="Meditation and Mindfulness"
-        body="Join our guided meditation sessions to cultivate peace and mindfulness in your daily life."
-      />
-
-      <ProgramsAndServicesItem
-        title="Cultural Events"
-        body="Participate in our cultural events to celebrate and share our rich Buddhist heritage with others."
-      />
-
-      <ProgramsAndServicesItem
-        title="Dharma Talks and Teachings"
-        body="Our teachers discuss key Buddhist concepts like suffering, impermanence, and the path to enlightenment through insightful Dharma talks."
-      />
+      {programsAndServices.map((item) => (
+        <ProgramsAndServicesItem key={item.title} title={item.title} body={item.body} />
+      ))}
 
       <LinkButton href="/services" variant="filled" className="mt-6 bg-[var(--neutral-darkest)]/10">
         Learn More
