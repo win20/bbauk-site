@@ -14,7 +14,8 @@ export default function LinkButton({
   children,
   className = "",
 }: LinkButtonProps) {
-  const baseStyles = "rounded-md px-4 font-semibold py-2 transition-colors font-pt-sans";
+  const baseStyles =
+    "rounded-md px-4 font-semibold py-2 transition-colors font-pt-sans inline-block";
 
   const variantStyles = {
     filled: "bg-white text-[var(--capecod)] hover:bg-gray-100",

@@ -1,7 +1,7 @@
 "use client";
 
 import LinkButton from "@components/shared/LinkButton";
-import Image from "next/image";
+import CroppedImage from "@components/shared/CroppedImage";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
 
 export default function HeroSection() {
@@ -57,7 +57,7 @@ export default function HeroSection() {
 
       <div
         ref={imageRef}
-        className={`relative h-[380px] w-full overflow-hidden transition-all duration-1000 ease-out md:h-80 lg:h-96 ${
+        className={`relative transition-all duration-1000 ease-out ${
           imageVisible ? "scale-100 opacity-100" : "scale-105 opacity-0"
         }`}
       >
@@ -70,14 +70,14 @@ export default function HeroSection() {
           <p className="pb-1 font-bold">Next Event</p>
           <p>Katina Ceremony &middot; 14 April &middot; Plaistow Temple</p>
         </div>
-        <Image
+        <CroppedImage
           src="/hero-buddha.jpg"
           alt="Hero Image"
-          fill
-          className={`object-cover transition-transform duration-[1200ms] ease-out ${
+          height="h-[380px] md:h-80 lg:h-96"
+          className={`transition-transform duration-[1200ms] ease-out ${
             imageVisible ? "scale-100" : "scale-110"
           }`}
-          style={{ objectPosition: "60%" }}
+          objectPosition="60%"
           priority
         />
       </div>
