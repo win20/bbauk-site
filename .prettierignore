@@ -1,0 +1,31 @@
+# Ignore lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore build output
+.next
+out
+
+# Ignore node_modules
+node_modules
+
+# Ignore coverage reports
+coverage
+
+# Ignore environment variable files
+.env
+.env.*
+
+# Ignore public/static assets (optional)
+public/*
+!public/*.js
+!public/*.ts
+
+# Ignore other config files
+*.config.js
+*.config.cjs
+*.config.mjs
+
+# Ignore miscellaneous
+.DS_Store
