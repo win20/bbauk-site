@@ -2,18 +2,10 @@
 
 import LinkButton from "@components/shared/LinkButton";
 import CroppedImage from "@components/shared/CroppedImage";
+import FadeInWrapper from "@components/shared/FadeInWrapper";
 import ProgramsAndServicesItem from "@components/programs-and-services-section/ProgramAndServiceItem";
-import { useScrollFadeIn } from "@hooks/useScrollFadeIn";
 
 export default function ProgramsAndServicesSection() {
-  const { ref: titleRef, isVisible: titleVisible } = useScrollFadeIn(0.1, "0px", 0);
-  const { ref: descRef, isVisible: descVisible } = useScrollFadeIn(0.1, "0px", 100);
-  const { ref: imageRef, isVisible: imageVisible } = useScrollFadeIn(0.1, "0px", 100);
-  const { ref: item1Ref, isVisible: item1Visible } = useScrollFadeIn(0.1, "0px", 200);
-  const { ref: item2Ref, isVisible: item2Visible } = useScrollFadeIn(0.1, "0px", 300);
-  const { ref: item3Ref, isVisible: item3Visible } = useScrollFadeIn(0.1, "0px", 400);
-  const { ref: buttonRef, isVisible: buttonVisible } = useScrollFadeIn(0.1, "0px", 200);
-
   const programsAndServices = [
     {
       title: "Meditation and Mindfulness",
@@ -31,38 +23,19 @@ export default function ProgramsAndServicesSection() {
 
   return (
     <section className="bg-[var(--neutral-lightest)] px-6 py-16 text-gray-950">
-      <h3
-        ref={titleRef}
-        className={`mb-4 text-base font-bold transition-all duration-500 ease-in-out ${
-          titleVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
-        }`}
-      >
-        Services
-      </h3>
-      <h2
-        className={`mb-4 font-merriweather text-4xl transition-all duration-500 ease-in-out ${
-          titleVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
-        }`}
-      >
-        Programs and Services
-      </h2>
-      <p
-        ref={descRef}
-        className={`transition-all duration-500 ease-in-out ${
-          descVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
-        }`}
-      >
-        We offer a variety of programs aimed at fostering community spirit and understanding of
-        Buddhist teachings. Our services include meditation sessions, cultural events, and
-        educational workshops.
-      </p>
+      <FadeInWrapper delay={0}>
+        <h3 className="mb-4 text-base font-bold">Services</h3>
+        <h2 className="mb-4 font-merriweather text-4xl">Programs and Services</h2>
+      </FadeInWrapper>
+      <FadeInWrapper delay={100}>
+        <p>
+          We offer a variety of programs aimed at fostering community spirit and understanding of
+          Buddhist teachings. Our services include meditation sessions, cultural events, and
+          educational workshops.
+        </p>
+      </FadeInWrapper>
 
-      <div
-        ref={imageRef}
-        className={`transition-all duration-1000 ease-out ${
-          imageVisible ? "scale-100 opacity-100" : "scale-105 opacity-0"
-        }`}
-      >
+      <FadeInWrapper delay={100} animation="scale" duration="extra-slow">
         <CroppedImage
           src="/buddha-services-section.jpg"
           alt="Hero Image"
@@ -71,33 +44,15 @@ export default function ProgramsAndServicesSection() {
           objectPosition="60%"
           priority
         />
-      </div>
+      </FadeInWrapper>
 
-      {programsAndServices.map((item, index) => {
-        const itemRefs = [item1Ref, item2Ref, item3Ref];
-        const itemVisibles = [item1Visible, item2Visible, item3Visible];
+      {programsAndServices.map((item, index) => (
+        <FadeInWrapper key={item.title} delay={200} duration="normal">
+          <ProgramsAndServicesItem title={item.title} body={item.body} />
+        </FadeInWrapper>
+      ))}
 
-        return (
-          <div
-            key={item.title}
-            ref={itemRefs[index]}
-            className={`transition-all duration-700 ease-in-out ${
-              itemVisibles[index]
-                ? "blur-0 translate-y-0 opacity-100"
-                : "translate-y-8 opacity-0 blur-sm"
-            }`}
-          >
-            <ProgramsAndServicesItem title={item.title} body={item.body} />
-          </div>
-        );
-      })}
-
-      <div
-        ref={buttonRef}
-        className={`transition-all duration-500 ease-in-out ${
-          buttonVisible ? "blur-0 translate-y-0 opacity-100" : "translate-y-6 opacity-0 blur-sm"
-        }`}
-      >
+      <FadeInWrapper delay={200}>
         <LinkButton
           href="/services"
           variant="filled"
@@ -105,7 +60,7 @@ export default function ProgramsAndServicesSection() {
         >
           Learn More
         </LinkButton>
-      </div>
+      </FadeInWrapper>
     </section>
   );
 }
