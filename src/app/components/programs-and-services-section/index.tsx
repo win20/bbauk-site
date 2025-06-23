@@ -4,6 +4,7 @@ import LinkButton from "@components/shared/LinkButton";
 import CroppedImage from "@components/shared/CroppedImage";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
 import ProgramsAndServicesItem from "@components/programs-and-services-section/ProgramAndServiceItem";
+import HeadingWithTag from "@components/shared/HeadingWithTag";
 
 export default function ProgramsAndServicesSection() {
   const programsAndServices = [
@@ -24,9 +25,9 @@ export default function ProgramsAndServicesSection() {
   return (
     <section className="bg-[var(--neutral-lightest)] px-6 py-16 text-gray-950">
       <FadeInWrapper delay={0}>
-        <h3 className="mb-4 text-base font-bold">Services</h3>
-        <h2 className="mb-4 font-merriweather text-4xl">Programs and Services</h2>
+        <HeadingWithTag heading="Programs and Services" tag="Services" />
       </FadeInWrapper>
+
       <FadeInWrapper delay={100}>
         <p>
           We offer a variety of programs aimed at fostering community spirit and understanding of
