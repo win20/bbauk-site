@@ -1,7 +1,7 @@
 import HeadingWithTag from "@components/shared/HeadingWithTag";
 import UpdateCard from "@components/updates-section/UpdateCard";
 import LinkButton from "@components/shared/LinkButton";
-import FadeInWrapper from "../shared/FadeInWrapper";
+import FadeInWrapper from "@components/shared/FadeInWrapper";
 
 export default function UpdatesSection() {
   const updates = [
