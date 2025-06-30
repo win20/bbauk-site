@@ -46,7 +46,7 @@ export default function ProgramsAndServicesSection() {
         />
       </FadeInWrapper>
 
-      {programsAndServices.map((item, index) => (
+      {programsAndServices.map((item) => (
         <FadeInWrapper key={item.title} delay={200} duration="normal">
           <ProgramsAndServicesItem title={item.title} body={item.body} />
         </FadeInWrapper>
