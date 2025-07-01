@@ -18,7 +18,6 @@ export default function UpdateCard({ id, title, description, image_src }: Update
         height="h-[220px]"
         className="mt-6 rounded-md"
         objectPosition="60%"
-        priority
       />
       <h4 className="mt-4 mb-2 font-merriweather text-lg">{title}</h4>
       <p>{description}</p>
