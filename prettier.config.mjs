@@ -1,5 +1,5 @@
 /** @type {import('prettier').Config} */
-export default {
+const config = {
   singleQuote: false,
   semi: true,
   trailingComma: "es5",
@@ -16,3 +16,5 @@ export default {
   plugins: ["prettier-plugin-tailwindcss"],
   tailwindStylesheet: "./src/app/globals.css",
 };
+
+export default config;
