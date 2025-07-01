@@ -38,7 +38,6 @@ export default function UpdatesSection() {
         {updates.map((update) => (
           <FadeInWrapper key={update.id} delay={200} duration="normal">
             <UpdateCard
-              key={update.id}
               id={update.id}
               title={update.title}
               description={update.description}

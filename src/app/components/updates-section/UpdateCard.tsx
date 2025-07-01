@@ -14,7 +14,7 @@ export default function UpdateCard({ id, title, description, image_src }: Update
     <div className="mb-10">
       <CroppedImage
         src={image_src}
-        alt="Hero Image"
+        alt={`Image for update: ${title}`}
         height="h-[220px]"
         className="mt-6 rounded-md"
         objectPosition="60%"
