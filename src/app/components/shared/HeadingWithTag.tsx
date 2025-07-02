@@ -6,8 +6,8 @@ type Props = {
 export default function HeadingWithTag({ heading, tag }: Props) {
   return (
     <>
-      <span className="mb-4 text-base font-bold">{tag}</span>
-      <h2 className="mb-4 font-merriweather text-4xl">{heading}</h2>
+      <span className="text-base font-bold">{tag}</span>
+      <h2 className="mb-4 mt-2 font-merriweather text-4xl">{heading}</h2>
     </>
   );
 }
