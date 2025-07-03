@@ -1,6 +1,6 @@
-import CroppedImage from '@components/shared/CroppedImage';
 import HeadingWithTag from '@components/shared/HeadingWithTag';
 import LinkButton from '@components/shared/LinkButton';
+import UpcomingEventItem from '@components/upcoming/UpcomingEventItem';
 
 const events = [
 	{
@@ -42,37 +42,11 @@ export default function UpcomingEvents() {
 				</p>
 				<div className="flex flex-col gap-6 w-full">
 					{events.map((event, idx) => (
-						<div
+						<UpcomingEventItem
 							key={event.title}
-							className="bg-[var(--neutral-white)] rounded-xl border border-[var(--color-border)] overflow-hidden flex flex-col"
-						>
-							<CroppedImage
-								src={event.image}
-								alt={event.title}
-								width="w-full"
-								height="h-40"
-								objectPosition="center"
-								priority={idx === 0}
-								quality={80}
-							/>
-							<div className="p-5 pt-4">
-								<h3 className="font-merriweather text-[var(--color-text-primary)] font-bold text-xl m-0">
-									{event.title}
-								</h3>
-								<div className="font-pt-sans text-[var(--color-text-primary)] text-sm my-2">
-									{event.date} &bull; {event.location}
-								</div>
-								<p className="font-pt-sans text-[var(--color-text-primary)] text-base mb-4 mt-2">
-									{event.description}
-								</p>
-								<a
-									href={event.link}
-									className="inline-block bg-[var(--color-accent-light)] text-[var(--color-text-primary)] font-pt-sans font-bold text-base rounded-md px-5 py-2 no-underline border-none"
-								>
-									Read more
-								</a>
-							</div>
-						</div>
+							{...event}
+							priority={idx === 0}
+						/>
 					))}
 				</div>
 				<LinkButton
