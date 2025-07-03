@@ -24,6 +24,7 @@
 
   /* Semantic color variables */
   --color-text-primary: var(--neutral-darker);
+  --color-text-secondary: var(--neutral-dark);
   --color-text-inverse: var(--neutral-white);
   --color-background-primary: var(--neutral-lightest);
   --color-background-inverse: var(--neutral-darker);
