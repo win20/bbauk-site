@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import CroppedImage from '@components/shared/CroppedImage';
 
 interface UpcomingEventItemProps {
@@ -20,7 +21,7 @@ export default function UpcomingEventItem({
   priority = false,
 }: UpcomingEventItemProps) {
   return (
-    <div className="bg-[var(--neutral-white)] rounded-xl border border-[var(--color-border)] overflow-hidden flex flex-col">
+    <div className="bg-[var(--capecod-lightest)] rounded-xl border border-[var(--color-border)] overflow-hidden flex flex-col">
       <CroppedImage
         src={image}
         alt={title}
@@ -34,18 +35,18 @@ export default function UpcomingEventItem({
         <h3 className="font-merriweather text-[var(--color-text-primary)] font-bold text-xl m-0">
           {title}
         </h3>
-        <div className="font-pt-sans text-[var(--color-text-primary)] text-sm my-2">
+        <div className="font-pt-sans text-[var(--color-text-secondary)] text-sm my-2">
           {date} &bull; {location}
         </div>
-        <p className="font-pt-sans text-[var(--color-text-primary)] text-base mb-4 mt-2">
+        <p className="font-pt-sans text-[var(--color-text-primary)] text-base mb-4 mt-4">
           {description}
         </p>
-        <a
+        <Link
           href={link}
-          className="inline-block bg-[var(--color-accent-light)] text-[var(--color-text-primary)] font-pt-sans font-bold text-base rounded-md px-5 py-2 no-underline border-none"
+          className="inline-flex items-center text-[var(--color-accent)] font-pt-sans font-semibold text-base hover:underline"
         >
           Read more
-        </a>
+        </Link>
       </div>
     </div>
   );
