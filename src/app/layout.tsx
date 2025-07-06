@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather, PT_Sans, Poppins } from "next/font/google";
 import "@app/globals.css";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 const merriweather = Merriweather({
   variable: "--font-merriweather",
