@@ -39,7 +39,7 @@ export default function UpcomingEventItem({
         <div className="my-2 font-pt-sans text-sm text-[var(--color-text-secondary)]">
           {date} &bull; {location}
         </div>
-        <p className="mt-4 mb-4 font-pt-sans text-base text-[var(--color-text-primary)]">
+        <p className="mt-2 mb-4 font-pt-sans text-base text-[var(--color-text-primary)]">
           {description}
         </p>
         <Link
