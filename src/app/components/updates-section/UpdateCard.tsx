@@ -19,11 +19,11 @@ export default function UpdateCard({ id, title, description, image_src }: Update
         className="mt-6 rounded-md"
         objectPosition="60%"
       />
-      <h4 className="mt-4 mb-2 font-merriweather text-lg">{title}</h4>
-      <p>{description}</p>
+      <h4 className="mt-4 font-merriweather text-lg">{title}</h4>
+      <p className="mt-2">{description}</p>
       <Link
         href={`/updates/${id}`}
-        className="group inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
+        className="group mt-4 inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
       >
         Read more
         <RiArrowRightSLine
