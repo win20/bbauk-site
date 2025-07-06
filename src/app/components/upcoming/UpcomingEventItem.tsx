@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import CroppedImage from '@components/shared/CroppedImage';
+import Link from "next/link";
+import { RiArrowRightSLine } from "react-icons/ri";
+import CroppedImage from "@components/shared/CroppedImage";
 
 interface UpcomingEventItemProps {
   image: string;
@@ -21,31 +22,35 @@ export default function UpcomingEventItem({
   priority = false,
 }: UpcomingEventItemProps) {
   return (
-    <div className="bg-[var(--capecod-lightest)] rounded-xl border border-[var(--color-border)] overflow-hidden flex flex-col">
+    <div className="flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--capecod-lightest)]">
       <CroppedImage
         src={image}
         alt={title}
         width="w-full"
-        height="h-40"
+        height="h-54"
         objectPosition="center"
         priority={priority}
         quality={80}
       />
       <div className="p-5 pt-4">
-        <h3 className="font-merriweather text-[var(--color-text-primary)] font-bold text-xl m-0">
+        <h3 className="m-0 font-merriweather text-xl font-bold text-[var(--color-text-primary)]">
           {title}
         </h3>
-        <div className="font-pt-sans text-[var(--color-text-secondary)] text-sm my-2">
+        <div className="my-2 font-pt-sans text-sm text-[var(--color-text-secondary)]">
           {date} &bull; {location}
         </div>
-        <p className="font-pt-sans text-[var(--color-text-primary)] text-base mb-4 mt-4">
+        <p className="mt-4 mb-4 font-pt-sans text-base text-[var(--color-text-primary)]">
           {description}
         </p>
         <Link
           href={link}
-          className="inline-flex items-center text-[var(--color-accent)] font-pt-sans font-semibold text-base hover:underline"
+          className="group inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
         >
           Read more
+          <RiArrowRightSLine
+            className="mt-1 ml-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1"
+            strokeWidth={1}
+          />
         </Link>
       </div>
     </div>

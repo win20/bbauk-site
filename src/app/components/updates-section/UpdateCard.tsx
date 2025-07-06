@@ -21,9 +21,15 @@ export default function UpdateCard({ id, title, description, image_src }: Update
       />
       <h4 className="mt-4 mb-2 font-merriweather text-lg">{title}</h4>
       <p>{description}</p>
-      <Link href={`/updates/${id}`} className="mt-4 inline-flex items-center">
+      <Link
+        href={`/updates/${id}`}
+        className="group inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
+      >
         Read more
-        <RiArrowRightSLine className="mt-1 ml-1" strokeWidth={1} />
+        <RiArrowRightSLine
+          className="mt-1 ml-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1"
+          strokeWidth={1}
+        />
       </Link>
     </div>
   );
