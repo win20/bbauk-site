@@ -37,6 +37,7 @@ export default function Upcoming() {
         <HeadingWithTag heading="Events" tag="Upcoming" />
         <p>Join us for these upcoming events organised by our community</p>
       </FadeInWrapper>
+
       <div className="mt-8 flex w-full flex-col gap-6">
         {events.map((event, idx) => (
           <FadeInWrapper key={event.title} delay={idx * 100} duration="normal">
@@ -54,6 +55,7 @@ export default function Upcoming() {
           </FadeInWrapper>
         ))}
       </div>
+
       <div className="mt-12 flex justify-center">
         <FadeInWrapper>
           <LinkButton href="/upcoming" variant="filled" className="bg-[var(--neutral-darkest)]/10">
