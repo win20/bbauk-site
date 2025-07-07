@@ -27,9 +27,17 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-[var(--capecod)] shadow-md" : "bg-[var(--capecod)]"
+      }`}
+    >
       {/* Navigation bar */}
-      <div className="relative flex items-center justify-between bg-[var(--capecod)] px-6 py-4 text-[var(--color-text-inverse)]">
+      <div
+        className={`relative flex items-center justify-between px-6 py-5 text-[var(--color-text-inverse)] transition-all duration-500 ease-out ${
+          isScrolled ? "translate-y-0 opacity-100" : "translate-y-2 opacity-85"
+        }`}
+      >
         {/* Animated bottom line */}
         <div
           className={`absolute bottom-0 left-0 h-px bg-white/10 ${
