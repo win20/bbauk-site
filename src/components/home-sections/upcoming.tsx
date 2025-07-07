@@ -42,7 +42,6 @@ export default function Upcoming() {
         {events.map((event, idx) => (
           <FadeInWrapper key={event.title} delay={idx * 100} duration="normal">
             <EventCard
-              key={event.title}
               variant="upcoming"
               image={event.image}
               title={event.title}
