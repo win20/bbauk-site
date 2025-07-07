@@ -1,6 +1,7 @@
 import HeadingWithTag from "components/shared/HeadingWithTag";
 import LinkButton from "components/shared/LinkButton";
 import EventCard from "components/shared/EventCard";
+import FadeInWrapper from "components/shared/FadeInWrapper";
 
 const events = [
   {
@@ -32,13 +33,13 @@ const events = [
 export default function Upcoming() {
   return (
     <section className="flex w-full flex-col items-center bg-[var(--capecod-lighter)] px-6 py-16 text-gray-950">
-      <div className="flex w-full flex-col items-center">
+      <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Events" tag="Upcoming" />
-        <p className="text-center font-pt-sans text-base text-[var(--color-text-primary)]">
-          Join us for these upcoming events organised by our community
-        </p>
-        <div className="mt-8 flex w-full flex-col gap-6">
-          {events.map((event, idx) => (
+        <p>Join us for these upcoming events organised by our community</p>
+      </FadeInWrapper>
+      <div className="mt-8 flex w-full flex-col gap-6">
+        {events.map((event, idx) => (
+          <FadeInWrapper key={event.title} delay={idx * 100} duration="normal">
             <EventCard
               key={event.title}
               variant="upcoming"
@@ -50,11 +51,15 @@ export default function Upcoming() {
               location={event.location}
               priority={idx === 0}
             />
-          ))}
-        </div>
-        <LinkButton href="#" variant="filled" className="mt-8 bg-[var(--neutral-darkest)]/10">
-          View all
-        </LinkButton>
+          </FadeInWrapper>
+        ))}
+      </div>
+      <div className="mt-12 flex justify-center">
+        <FadeInWrapper>
+          <LinkButton href="/upcoming" variant="filled" className="bg-[var(--neutral-darkest)]/10">
+            View All
+          </LinkButton>
+        </FadeInWrapper>
       </div>
     </section>
   );

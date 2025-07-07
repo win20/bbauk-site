@@ -28,8 +28,8 @@ export default function Updates() {
   ];
 
   return (
-    <section className="bg-[var(--capecod-lighter)] px-6 py-16 text-gray-950">
-      <FadeInWrapper>
+    <section className="flex w-full flex-col items-center bg-[var(--capecod-lighter)] px-6 py-16 text-gray-950">
+      <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Latest News and Updates" tag="Updates" />
         <p>Stay informed about our community events</p>
       </FadeInWrapper>
