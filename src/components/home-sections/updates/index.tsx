@@ -1,5 +1,5 @@
 import HeadingWithTag from "@components/shared/HeadingWithTag";
-import UpdateCard from "@components/updates-section/UpdateCard";
+import UpdateCard from "@/components/home-sections/updates/UpdateCard";
 import LinkButton from "@components/shared/LinkButton";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
 
