@@ -3,10 +3,10 @@
 import LinkButton from "@components/shared/LinkButton";
 import CroppedImage from "@components/shared/CroppedImage";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
-import ProgramsAndServicesItem from "@/components/home-sections/programs-and-services/ProgramAndServiceItem";
 import HeadingWithTag from "@components/shared/HeadingWithTag";
+import SimpleCard from "@/components/shared/SimpleCard";
 
-export default function ProgramsAndServicesSection() {
+export default function Programs() {
   const programsAndServices = [
     {
       title: "Meditation and Mindfulness",
@@ -49,7 +49,7 @@ export default function ProgramsAndServicesSection() {
 
       {programsAndServices.map((item) => (
         <FadeInWrapper key={item.title} delay={200} duration="normal">
-          <ProgramsAndServicesItem title={item.title} body={item.body} />
+          <SimpleCard title={item.title} body={item.body} />
         </FadeInWrapper>
       ))}
 

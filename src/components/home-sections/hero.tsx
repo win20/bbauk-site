@@ -4,7 +4,7 @@ import LinkButton from "@components/shared/LinkButton";
 import CroppedImage from "@components/shared/CroppedImage";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
 
-export default function HeroSection() {
+export default function Hero() {
   return (
     <section className="w-full bg-[var(--capecod)] text-white">
       <div className="px-6 py-16">

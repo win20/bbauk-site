@@ -1,6 +1,6 @@
 import HeadingWithTag from "@components/shared/HeadingWithTag";
 import LinkButton from "@components/shared/LinkButton";
-import UpcomingEventItem from "@/components/home-sections/upcoming/UpcomingEventItem";
+import EventCard from "@components/shared/EventCard";
 
 const events = [
   {
@@ -29,7 +29,7 @@ const events = [
   },
 ];
 
-export default function UpcomingEvents() {
+export default function Upcoming() {
   return (
     <section className="flex w-full flex-col items-center bg-[var(--capecod-lighter)] px-6 py-16 text-gray-950">
       <div className="flex w-full flex-col items-center">
@@ -39,7 +39,17 @@ export default function UpcomingEvents() {
         </p>
         <div className="mt-8 flex w-full flex-col gap-6">
           {events.map((event, idx) => (
-            <UpcomingEventItem key={event.title} {...event} priority={idx === 0} />
+            <EventCard
+              key={event.title}
+              variant="upcoming"
+              image={event.image}
+              title={event.title}
+              description={event.description}
+              link={event.link}
+              date={event.date}
+              location={event.location}
+              priority={idx === 0}
+            />
           ))}
         </div>
         <LinkButton href="#" variant="filled" className="mt-8 bg-[var(--neutral-darkest)]/10">
