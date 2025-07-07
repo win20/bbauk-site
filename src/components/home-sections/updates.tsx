@@ -1,7 +1,7 @@
-import HeadingWithTag from "@components/shared/HeadingWithTag";
-import EventCard from "@components/shared/EventCard";
-import LinkButton from "@components/shared/LinkButton";
-import FadeInWrapper from "@components/shared/FadeInWrapper";
+import HeadingWithTag from "components/shared/HeadingWithTag";
+import EventCard from "components/shared/EventCard";
+import LinkButton from "components/shared/LinkButton";
+import FadeInWrapper from "components/shared/FadeInWrapper";
 
 export default function Updates() {
   const updates = [

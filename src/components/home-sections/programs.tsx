@@ -1,10 +1,10 @@
 "use client";
 
-import LinkButton from "@components/shared/LinkButton";
-import CroppedImage from "@components/shared/CroppedImage";
-import FadeInWrapper from "@components/shared/FadeInWrapper";
-import HeadingWithTag from "@components/shared/HeadingWithTag";
-import SimpleCard from "@/components/shared/SimpleCard";
+import LinkButton from "components/shared/LinkButton";
+import CroppedImage from "components/shared/CroppedImage";
+import FadeInWrapper from "components/shared/FadeInWrapper";
+import HeadingWithTag from "components/shared/HeadingWithTag";
+import SimpleCard from "components/shared/SimpleCard";
 
 export default function Programs() {
   const programsAndServices = [

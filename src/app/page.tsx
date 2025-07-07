@@ -1,7 +1,7 @@
-import Hero from "@/components/home-sections/hero";
-import Programs from "@/components/home-sections/programs";
-import Updates from "@/components/home-sections/updates";
-import Upcoming from "@/components/home-sections/upcoming";
+import Hero from "components/home-sections/hero";
+import Programs from "components/home-sections/programs";
+import Updates from "components/home-sections/updates";
+import Upcoming from "components/home-sections/upcoming";
 
 export default function Home() {
   return (

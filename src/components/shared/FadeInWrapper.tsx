@@ -2,7 +2,7 @@
 
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import { useScrollFadeIn } from "hooks/useScrollFadeIn";
 
 type ElementType = React.ElementType;
 
