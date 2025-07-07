@@ -1,9 +1,9 @@
 import HeadingWithTag from "@components/shared/HeadingWithTag";
-import UpdateCard from "@/components/home-sections/updates/UpdateCard";
+import EventCard from "@components/shared/EventCard";
 import LinkButton from "@components/shared/LinkButton";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
 
-export default function UpdatesSection() {
+export default function Updates() {
   const updates = [
     {
       id: 1,
@@ -37,11 +37,12 @@ export default function UpdatesSection() {
       <div className="mt-10">
         {updates.map((update) => (
           <FadeInWrapper key={update.id} delay={200} duration="normal">
-            <UpdateCard
-              id={update.id}
+            <EventCard
+              variant="update"
+              image={update.image_src}
               title={update.title}
               description={update.description}
-              image_src={update.image_src}
+              link={`/updates/${update.id}`}
             />
           </FadeInWrapper>
         ))}
