@@ -1,6 +1,6 @@
-import HeadingWithTag from "@components/shared/HeadingWithTag";
-import LinkButton from "@components/shared/LinkButton";
-import EventCard from "@components/shared/EventCard";
+import HeadingWithTag from "components/shared/HeadingWithTag";
+import LinkButton from "components/shared/LinkButton";
+import EventCard from "components/shared/EventCard";
 
 const events = [
   {

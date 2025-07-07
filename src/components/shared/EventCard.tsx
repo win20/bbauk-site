@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
-import CroppedImage from "@/components/shared/CroppedImage";
+import CroppedImage from "components/shared/CroppedImage";
 
 interface BaseEventCardProps {
   image: string;

@@ -1,8 +1,8 @@
 "use client";
 
-import LinkButton from "@components/shared/LinkButton";
-import CroppedImage from "@components/shared/CroppedImage";
-import FadeInWrapper from "@components/shared/FadeInWrapper";
+import LinkButton from "components/shared/LinkButton";
+import CroppedImage from "components/shared/CroppedImage";
+import FadeInWrapper from "components/shared/FadeInWrapper";
 
 export default function Hero() {
   return (
