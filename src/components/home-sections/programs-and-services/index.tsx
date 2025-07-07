@@ -3,7 +3,7 @@
 import LinkButton from "@components/shared/LinkButton";
 import CroppedImage from "@components/shared/CroppedImage";
 import FadeInWrapper from "@components/shared/FadeInWrapper";
-import ProgramsAndServicesItem from "@components/programs-and-services-section/ProgramAndServiceItem";
+import ProgramsAndServicesItem from "@/components/home-sections/programs-and-services/ProgramAndServiceItem";
 import HeadingWithTag from "@components/shared/HeadingWithTag";
 
 export default function ProgramsAndServicesSection() {

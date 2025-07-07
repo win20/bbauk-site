@@ -1,6 +1,6 @@
 import HeadingWithTag from "@components/shared/HeadingWithTag";
 import LinkButton from "@components/shared/LinkButton";
-import UpcomingEventItem from "@components/upcoming/UpcomingEventItem";
+import UpcomingEventItem from "@/components/home-sections/upcoming/UpcomingEventItem";
 
 const events = [
   {

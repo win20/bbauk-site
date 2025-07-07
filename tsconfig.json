@@ -22,6 +22,7 @@
       "@/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@components/*": ["./src/components/*"],
+      "@sections/*": ["src/components/home-sections/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },
