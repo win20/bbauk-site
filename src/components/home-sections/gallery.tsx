@@ -76,8 +76,8 @@ export default function Gallery() {
   }, [api]);
 
   return (
-    <section className="w-full bg-gray-100 py-16">
-      <div className="px-6">
+    <section className="w-full overflow-visible bg-gray-100 py-16">
+      <div className="">
         <div className="mx-auto max-w-4xl">
           <FadeInWrapper delay={0} className="mb-8 text-center">
             <HeadingWithTag tag="Gallery" heading="Image Gallery" />
@@ -93,13 +93,13 @@ export default function Gallery() {
               setApi={setApi}
               className="w-full"
             >
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent className="mx-10 md:-ml-4">
                 {dummyGalleryImages.map((image) => (
-                  <CarouselItem key={image.id} className="basis-1/2 pl-2 md:basis-1/3 md:pl-4">
+                  <CarouselItem key={image.id} className="px-2 md:basis-1/3 md:pl-4">
                     <CroppedImage
                       src={image.src}
                       alt={image.alt}
-                      height="h-48 md:h-64"
+                      height="h-63 md:h-64"
                       className="rounded-lg shadow-md"
                     />
                   </CarouselItem>
