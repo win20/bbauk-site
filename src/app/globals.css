@@ -1,91 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  /* Primitive color variables */
-  --neutral-white: #ffffff;
-  --neutral-lightest: #f2f2f2;
-  --neutral-lighter: #d8d8d8;
-  --neutral-light: #b2b2b2;
-  --neutral: #7f7f7f;
-  --neutral-dark: #4c4c4c;
-  --neutral-darker: #191919;
-  --neutral-darkest: #000000;
-
-  --capecod-lightest: #ebecec;
-  --capecod-lighter: #d7dad9;
-  --capecod-light: #757e7c;
-  --capecod: #3a4744;
-  --capecod-dark: #2e3836;
-  --capecod-darker: #171c1b;
-  --capecod-darkest: #111514;
-
-  /* Semantic color variables */
-  --color-text-primary: var(--neutral-darker);
-  --color-text-secondary: var(--neutral-dark);
-  --color-text-inverse: var(--neutral-white);
-  --color-background-primary: var(--neutral-lightest);
-  --color-background-inverse: var(--neutral-darker);
-  --color-border: var(--neutral-lighter);
-  --color-border-strong: #19191926; /* neutral-darker with 15% opacity */
-  --color-accent: var(--capecod);
-  --color-accent-light: var(--capecod-lightest);
-  --color-accent-dark: var(--capecod-dark);
-
-  --font-merriweather: var(--font-merriweather);
-  --font-pt-sans: var(--font-pt-sans);
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Color variables */
+  --color-neutral-white: #ffffff;
+  --color-neutral-lightest: #f2f2f2;
+  --color-neutral-lighter: #d8d8d8;
+  --color-neutral-light: #b2b2b2;
+  --color-neutral: #7f7f7f;
+  --color-neutral-dark: #4c4c4c;
+  --color-neutral-darker: #191919;
+  --color-neutral-darkest: #000000;
+
+  --color-capecod-lightest: #ebecec;
+  --color-capecod-lighter: #d7dad9;
+  --color-capecod-light: #757e7c;
+  --color-capecod: #3a4744;
+  --color-capecod-dark: #2e3836;
+  --color-capecod-darker: #171c1b;
+  --color-capecod-darkest: #111514;
+
+  /* Font variables */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
-  /* Inline custom color variables for Tailwind v4 */
-  --neutral-white: #ffffff;
-  --neutral-lightest: #f2f2f2;
-  --neutral-lighter: #d8d8d8;
-  --neutral-light: #b2b2b2;
-  --neutral: #7f7f7f;
-  --neutral-dark: #4c4c4c;
-  --neutral-darker: #191919;
-  --neutral-darkest: #000000;
-
-  --capecod-lightest: #ebecec;
-  --capecod-lighter: #d7dad9;
-  --capecod-light: #757e7c;
-  --capecod: #3a4744;
-  --capecod-dark: #2e3836;
-  --capecod-darker: #171c1b;
-  --capecod-darkest: #111514;
-
-  --color-text-primary: var(--neutral-darker);
-  --color-text-inverse: var(--neutral-white);
-  --color-background-primary: var(--neutral-lightest);
-  --color-background-inverse: var(--neutral-darker);
-  --color-border: var(--neutral-lighter);
-  --color-border-strong: #19191926;
-  --color-accent: var(--capecod);
-  --color-accent-light: var(--capecod-lightest);
-  --color-accent-dark: var(--capecod-dark);
-
   --font-merriweather: var(--font-merriweather);
   --font-pt-sans: var(--font-pt-sans);
   --font-poppins: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @theme inline {
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
