@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-
   /* Primitive color variables */
   --neutral-white: #ffffff;
   --neutral-lightest: #f2f2f2;

@@ -117,7 +117,9 @@ export default function Gallery() {
                 <button
                   key={index}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    index === current - 1 ? "bg-[var(--neutral-darkest)]" : "bg-[var(--neutral-light)]"
+                    index === current - 1
+                      ? "bg-[var(--neutral-darkest)]"
+                      : "bg-[var(--neutral-light)]"
                   }`}
                   onClick={() => api?.scrollTo(index)}
                 />
