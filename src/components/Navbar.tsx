@@ -91,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-[var(--color-text-inverse)] shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"
