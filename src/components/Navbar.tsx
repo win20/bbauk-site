@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-[var(--capecod)] shadow-md" : "bg-[var(--capecod)]"
+        isScrolled ? "bg-capecod shadow-md" : "bg-capecod"
       }`}
     >
       {/* Navigation bar */}
@@ -76,7 +76,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop nav */}
-        <nav className="ml-8 hidden gap-8 sm:flex">
+        {/* <nav className="ml-8 hidden gap-8 sm:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -86,12 +86,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-        </nav>
+        </nav> */}
       </div>
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-[var(--capecod)] pb-8 text-[var(--color-text-inverse)] shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-[var(--color-text-inverse)] shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"
@@ -109,7 +109,7 @@ export default function Navbar() {
             >
               <a
                 href={link.href}
-                className="text-base font-[var(--font-pt-sans)] text-[var(--color-text-inverse)] hover:underline"
+                className="font-pt-sans text-base hover:underline"
                 onClick={() => setOpen(false)}
               >
                 {link.label}

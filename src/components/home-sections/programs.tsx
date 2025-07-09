@@ -23,7 +23,7 @@ export default function Programs() {
   ];
 
   return (
-    <section className="bg-[var(--neutral-lightest)] px-6 py-16 text-gray-950">
+    <section className="bg-neutral-lightest px-6 py-16 text-gray-950">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Programs and Services" tag="Services" />
       </FadeInWrapper>
@@ -54,11 +54,7 @@ export default function Programs() {
       ))}
 
       <FadeInWrapper delay={200}>
-        <LinkButton
-          href="/services"
-          variant="filled"
-          className="mt-6 bg-[var(--neutral-darkest)]/10"
-        >
+        <LinkButton href="/services" variant="filled" className="mt-6 bg-neutral-darkest/10">
           Learn More
         </LinkButton>
       </FadeInWrapper>

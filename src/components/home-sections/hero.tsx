@@ -6,7 +6,7 @@ import FadeInWrapper from "components/shared/FadeInWrapper";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-[var(--capecod)] text-white">
+    <section className="w-full bg-capecod text-white">
       <div className="px-6 py-16">
         <div className="mx-auto max-w-4xl space-y-6 text-left">
           <FadeInWrapper delay={0} as="h1" className="font-merriweather text-4xl font-bold">
