@@ -107,8 +107,8 @@ export default function Gallery() {
               </CarouselContent>
 
               <div className="mt-6 flex justify-center space-x-4">
-                <CarouselPrevious className="relative top-auto left-auto translate-x-0 translate-y-0" />
-                <CarouselNext className="relative top-auto right-auto translate-x-0 translate-y-0" />
+                <CarouselPrevious className="relative top-auto left-auto translate-x-0 translate-y-0 rounded-sm border-none hover:bg-[var(--neutral-darkest)]/10" />
+                <CarouselNext className="relative top-auto right-auto translate-x-0 translate-y-0 rounded-sm border-none hover:bg-[var(--neutral-darkest)]/10" />
               </div>
             </Carousel>
 
@@ -117,7 +117,7 @@ export default function Gallery() {
                 <button
                   key={index}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    index === current - 1 ? "bg-gray-800" : "bg-gray-400"
+                    index === current - 1 ? "bg-[var(--neutral-darkest)]" : "bg-[var(--neutral-light)]"
                   }`}
                   onClick={() => api?.scrollTo(index)}
                 />
