@@ -81,14 +81,14 @@ export default function Gallery() {
         <div className="mx-auto max-w-4xl">
           <FadeInWrapper delay={0} className="mb-8 text-center">
             <HeadingWithTag tag="Gallery" heading="Image Gallery" />
-            <p className="mt-2 text-gray-600">Explore our cherished moments from past events.</p>
+            <p>Explore our cherished moments from past events.</p>
           </FadeInWrapper>
 
           <FadeInWrapper delay={200} className="relative">
             <Carousel
               opts={{
                 align: "start",
-                loop: true,
+                loop: false,
               }}
               setApi={setApi}
               className="w-full"
@@ -99,7 +99,7 @@ export default function Gallery() {
                     <CroppedImage
                       src={image.src}
                       alt={image.alt}
-                      height="h-63 md:h-64"
+                      height="h-64 md:h-64"
                       className="rounded-lg shadow-md"
                     />
                   </CarouselItem>
