@@ -32,7 +32,7 @@ export default function EventCard({
 
   if (isUpcoming) {
     return (
-      <div className="flex flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--capecod-lightest)]">
+      <div className="flex flex-col overflow-hidden rounded-xl bg-capecod-lightest">
         <CroppedImage
           src={image}
           alt={title}

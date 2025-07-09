@@ -28,7 +28,7 @@ export default function Updates() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center bg-[var(--capecod-lighter)] px-6 py-16 text-gray-950">
+    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950">
       <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Latest News and Updates" tag="Updates" />
         <p>Stay informed about our community events</p>
@@ -50,7 +50,7 @@ export default function Updates() {
 
       <div className="mt-2 flex justify-center">
         <FadeInWrapper>
-          <LinkButton href="/updates" variant="filled" className="bg-[var(--neutral-darkest)]/10">
+          <LinkButton href="/updates" variant="filled" className="bg-neutral-darkest/10">
             View All
           </LinkButton>
         </FadeInWrapper>
