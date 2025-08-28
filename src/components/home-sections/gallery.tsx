@@ -1,17 +1,21 @@
 "use client";
 
+import { useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import CroppedImage from "components/shared/CroppedImage";
 import FadeInWrapper from "components/shared/FadeInWrapper";
 import HeadingWithTag from "components/shared/HeadingWithTag";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 export default function Gallery() {
+  const [api, setApi] = useState<CarouselApi>();
+
   const galleryImages = [
     {
       src: "/hero-buddha.jpg",
@@ -40,7 +44,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="bg-white px-6 py-16 text-gray-950">
+    <section className="bg-background px-6 py-16 text-gray-950">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Image Gallery" tag="" />
       </FadeInWrapper>
@@ -52,8 +56,9 @@ export default function Gallery() {
         </p>
       </FadeInWrapper>
 
-      <FadeInWrapper delay={200} className="relative">
+      <FadeInWrapper delay={200}>
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: true,
@@ -75,9 +80,30 @@ export default function Gallery() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-4 md:-left-12" />
-          <CarouselNext className="-right-4 md:-right-12" />
         </Carousel>
+        
+        <div className="flex items-center justify-center gap-4 mt-6">
+          <Button
+            variant="secondary"
+            size="icon"
+            className="size-12 rounded-sm bg-neutral-white hover:cursor-pointer hover:bg-neutral-lighter"
+            onClick={() => api?.scrollPrev()}
+            disabled={!api?.canScrollPrev()}
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="sr-only">Previous slide</span>
+          </Button>
+          <Button
+            variant="secondary"
+            size="icon"
+            className="size-12 rounded-sm bg-neutral-white hover:cursor-pointer hover:bg-neutral-lighter"
+            onClick={() => api?.scrollNext()}
+            disabled={!api?.canScrollNext()}
+          >
+            <ArrowRight className="h-4 w-4" />
+            <span className="sr-only">Next slide</span>
+          </Button>
+        </div>
       </FadeInWrapper>
     </section>
   );
