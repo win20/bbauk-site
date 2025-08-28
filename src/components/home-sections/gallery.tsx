@@ -37,7 +37,7 @@ export default function Gallery() {
       alt: "Buddhist ceremony at temple",
     },
     {
-      src: "/buddha-services-section.jpg", 
+      src: "/buddha-services-section.jpg",
       alt: "Community meditation session",
     },
     {
@@ -66,8 +66,8 @@ export default function Gallery() {
 
       <FadeInWrapper delay={100}>
         <p className="mb-8 font-pt-sans text-base leading-relaxed">
-          Explore moments from our community gatherings, ceremonies, and cultural celebrations 
-          that bring together our Buddhist community in the UK.
+          Explore moments from our community gatherings, ceremonies, and cultural celebrations that
+          bring together our Buddhist community in the UK.
         </p>
       </FadeInWrapper>
 
@@ -82,7 +82,7 @@ export default function Gallery() {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 md:basis-1/2 md:pl-4 lg:basis-1/3">
                 <div className="h-64 overflow-hidden rounded-lg">
                   <CroppedImage
                     src={image.src}
@@ -96,24 +96,22 @@ export default function Gallery() {
             ))}
           </CarouselContent>
         </Carousel>
-        
+
         {/* Pagination Dots */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="mt-6 flex justify-center gap-2">
           {Array.from({ length: count }, (_, index) => (
             <button
               key={index}
               className={`h-2 w-2 rounded-full transition-all duration-200 ${
-                index + 1 === current
-                  ? "bg-gray-800 scale-125"
-                  : "bg-gray-300 hover:bg-gray-500"
+                index + 1 === current ? "scale-125 bg-gray-800" : "bg-gray-300 hover:bg-gray-500"
               }`}
               onClick={() => api?.scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
-        
-        <div className="flex items-center justify-center gap-4 mt-8">
+
+        <div className="mt-8 flex items-center justify-center gap-4">
           <Button
             variant="secondary"
             size="icon"
