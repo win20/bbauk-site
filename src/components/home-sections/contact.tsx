@@ -3,6 +3,7 @@
 import Image from "next/image";
 import FadeInWrapper from "components/shared/FadeInWrapper";
 import HeadingWithTag from "components/shared/HeadingWithTag";
+import { OutlinedEnvelope, OutlinedTelephone, OutlinedMapMarker } from "@/components/icons";
 
 const EMAIL = "info@bangladeshbuddhistassociation.org";
 const PHONE_DISPLAY = "+44 (0)20 1234 5678";
@@ -74,53 +75,53 @@ export default function Contact() {
 
         <div className="mt-12 space-y-14">
           <FadeInWrapper delay={0.05}>
-            <IconEnvelope className="h-7 w-7 text-white" />
-              <h3 className="font-serif text-2xl text-white mt-4 md:text-3xl">Email</h3>
-              <div className="mt-2 space-y-3">
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="block underline decoration-neutral-500 underline-offset-4 hover:text-white"
-                  >
-                    {EMAIL}
-                  </a>
+            <OutlinedEnvelope width={38} color="#ffffff" />
+            <h3 className="font-serif text-2xl text-white md:text-3xl">Email</h3>
+            <div className="mt-2 space-y-3">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="block underline decoration-neutral-500 underline-offset-4 hover:text-white"
+              >
+                {EMAIL}
+              </a>
             </div>
           </FadeInWrapper>
 
           <FadeInWrapper delay={0.1}>
-              <IconPhone className="h-7 w-7 text-white" />
-                <h3 className="font-serif text-2xl text-white mt-4 md:text-3xl">Phone</h3>
-                <p className="mt-2 text-neutral-300">Call us anytime!</p>
-                <a
-                  href={`tel:${PHONE_TEL}`}
-                  className="mt-3 inline-block underline decoration-neutral-500 underline-offset-4 hover:text-white"
-                >
-                  {PHONE_DISPLAY}
-                </a>
+            <OutlinedTelephone width={40} color="#ffffff" />
+            <h3 className="font-serif text-2xl text-white md:text-3xl">Phone</h3>
+            <p className="mt-2 text-neutral-300">Call us anytime!</p>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="mt-3 inline-block underline decoration-neutral-500 underline-offset-4 hover:text-white"
+            >
+              {PHONE_DISPLAY}
+            </a>
           </FadeInWrapper>
 
           <FadeInWrapper delay={0.15}>
-            <IconPin className="h-7 w-7 text-white" />
-              <h3 className="font-serif text-2xl text-white mt-4 md:text-3xl">Office</h3>
-              <p className="mt-2">{ADDRESS}</p>
-              <a
-                href={MAPS_URL}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-2 inline-flex items-center gap-2 font-semibold text-white"
+            <OutlinedMapMarker width={42} color="#ffffff" />
+            <h3 className="font-serif text-2xl text-white md:text-3xl">Office</h3>
+            <p className="mt-2">{ADDRESS}</p>
+            <a
+              href={MAPS_URL}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-2 inline-flex items-center gap-2 font-semibold text-white"
+            >
+              <span className="underline decoration-neutral-500 underline-offset-4">
+                Get Directions
+              </span>
+              <svg
+                viewBox="0 0 24 24"
+                className="mt-1 h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
               >
-                <span className="underline decoration-neutral-500 underline-offset-4">
-                  Get Directions
-                </span>
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </a>
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </a>
           </FadeInWrapper>
 
           <FadeInWrapper delay={0.2}>
