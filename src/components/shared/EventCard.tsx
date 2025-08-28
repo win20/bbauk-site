@@ -43,20 +43,20 @@ export default function EventCard({
           quality={80}
         />
         <div className="p-5 pt-4">
-          <h3 className="m-0 font-merriweather text-xl font-bold text-[var(--color-text-primary)]">
+          <h3 className="m-0 font-merriweather text-xl font-bold text-foreground">
             {title}
           </h3>
           {date && location && (
-            <div className="my-2 font-pt-sans text-sm text-[var(--color-text-secondary)]">
+            <div className="my-2 font-pt-sans text-sm text-foreground">
               {date} &bull; {location}
             </div>
           )}
-          <p className="mt-2 mb-4 font-pt-sans text-base text-[var(--color-text-primary)]">
+          <p className="mt-2 mb-4 font-pt-sans text-base text-foreground">
             {description}
           </p>
           <Link
             href={link}
-            className="group inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
+            className="group inline-flex items-center font-pt-sans text-base font-semibold text-foreground hover:underline"
           >
             Read more
             <RiArrowRightSLine
@@ -83,7 +83,7 @@ export default function EventCard({
         <p className="mt-2">{description}</p>
         <Link
           href={link}
-          className="group mt-4 inline-flex items-center font-pt-sans text-base font-semibold text-[var(--color-accent)] hover:underline"
+          className="group mt-4 inline-flex items-center font-pt-sans text-base font-semibold text-foreground hover:underline"
         >
           Read more
           <RiArrowRightSLine
