@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import CroppedImage from "components/shared/CroppedImage";
 import FadeInWrapper from "components/shared/FadeInWrapper";
@@ -15,6 +15,21 @@ import {
 
 export default function Gallery() {
   const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   const galleryImages = [
     {
@@ -82,7 +97,23 @@ export default function Gallery() {
           </CarouselContent>
         </Carousel>
         
-        <div className="flex items-center justify-center gap-4 mt-6">
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {Array.from({ length: count }, (_, index) => (
+            <button
+              key={index}
+              className={`h-2 w-2 rounded-full transition-all duration-200 ${
+                index + 1 === current
+                  ? "bg-gray-800 scale-125"
+                  : "bg-gray-300 hover:bg-gray-500"
+              }`}
+              onClick={() => api?.scrollTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+        
+        <div className="flex items-center justify-center gap-4 mt-8">
           <Button
             variant="secondary"
             size="icon"
