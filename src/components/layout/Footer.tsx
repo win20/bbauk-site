@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-darker py-12 text-center text-foreground-inverse">
@@ -7,12 +9,12 @@ export default function Footer() {
       </div>
 
       <div className="mt-12 flex flex-col space-y-6 font-semibold">
-        <a href="/">Home</a>
-        <a href="/about-us">About Us</a>
-        <a href="/events">Events</a>
-        <a href="/gallery">Gallery</a>
-        <a href="/donations">Donations</a>
-        <a href="/contact">Contact</a>
+        <Link href="/">Home</Link>
+        <Link href="/about-us">About Us</Link>
+        <Link href="/events">Events</Link>
+        <Link href="/gallery">Gallery</Link>
+        <Link href="/donations">Donations</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
       <hr className="mx-22 my-16 h-px border-0 bg-neutral-dark" />

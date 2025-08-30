@@ -1,4 +1,4 @@
 // Outlined icons
-export { default as OutlinedEnvelope } from "./outlined/Envelope";
-export { default as OutlinedTelephone } from "./outlined/Telephone";
-export { default as OutlinedMapMarker } from "./outlined/MapMarker";
+export { default as OutlinedEnvelope } from "@/components/icons/outlined/Envelope";
+export { default as OutlinedTelephone } from "@/components/icons/outlined/Telephone";
+export { default as OutlinedMapMarker } from "@/components/icons/outlined/MapMarker";
