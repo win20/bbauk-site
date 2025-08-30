@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       {/* Navigation bar */}
       <div
-        className={`relative flex items-center justify-between px-6 py-5 text-foreground-inverse transition-all duration-500 ease-out ${
+        className={`relative flex items-center md:py-6 justify-between px-6 py-5 text-foreground-inverse transition-all duration-500 ease-out ${
           isScrolled ? "translate-y-0 opacity-100" : "translate-y-2 opacity-85"
         }`}
       >
