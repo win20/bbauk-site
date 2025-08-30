@@ -16,9 +16,9 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="bg-neutral-darker text-neutral-200"
+      className="bg-neutral-darker text-neutral-200 md:px-26"
     >
-      <div className="mx-auto max-w-5xl px-6 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-5xl py-20 md:py-28">
         <FadeInWrapper>
           <HeadingWithTag tag="Connect" heading="Contact Us" />
           <p className="mt-6 text-lg text-neutral-300 md:text-xl">

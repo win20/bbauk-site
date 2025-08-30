@@ -50,12 +50,12 @@ export default function Navbar() {
           }}
         />
 
-        <span className="font-poppins text-sm leading-none font-extrabold tracking-wide">
+        <span className="font-poppins text-sm leading-none font-extrabold tracking-wide md:pl-20">
           Bangladesh Buddhist Association UK
         </span>
 
         <button
-          className="text-3xl focus:outline-none sm:hidden"
+          className="text-3xl focus:outline-none md:pr-20 lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(!open)}
         >
@@ -76,22 +76,22 @@ export default function Navbar() {
         </button>
 
         {/* Desktop nav */}
-        {/* <nav className="ml-8 hidden gap-8 sm:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-base font-[var(--font-pt-sans)] text-[var(--color-text-inverse)] hover:underline"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav> */}
+        {/*<nav className="ml-8 hidden gap-8 sm:flex">*/}
+        {/*  {navLinks.map((link) => (*/}
+        {/*    <a*/}
+        {/*      key={link.label}*/}
+        {/*      href={link.href}*/}
+        {/*      className="text-base font-[var(--font-pt-sans)] text-[var(--color-text-inverse)] hover:underline"*/}
+        {/*    >*/}
+        {/*      {link.label}*/}
+        {/*    </a>*/}
+        {/*  ))}*/}
+        {/*</nav>*/}
       </div>
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out sm:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out md:px-20 md:pb-16 lg:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"

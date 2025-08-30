@@ -32,7 +32,7 @@ const events = [
 
 export default function Upcoming() {
   return (
-    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950">
+    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 md:px-26">
       <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Events" tag="Upcoming" />
         <p>Join us for these upcoming events organised by our community</p>
