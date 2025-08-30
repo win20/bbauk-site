@@ -23,7 +23,7 @@ export default function Programs() {
   ];
 
   return (
-    <section className="bg-neutral-lightest px-6 py-16 text-gray-950 md:px-26">
+    <section className="bg-neutral-lightest px-6 py-16 text-gray-950 sm:px-[15%]">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Programs and Services" tag="Services" />
       </FadeInWrapper>
@@ -40,7 +40,7 @@ export default function Programs() {
         <CroppedImage
           src="/buddha-services-section.jpg"
           alt="Hero Image"
-          height="h-[350px] md:h-80 lg:h-96"
+          height="h-[350px] sm:h-90 lg:h-96"
           className="mt-6 rounded-md"
           objectPosition="60%"
           priority
