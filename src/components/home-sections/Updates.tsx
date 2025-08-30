@@ -28,7 +28,7 @@ export default function Updates() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950">
+    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 md:px-26">
       <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Latest News and Updates" tag="Updates" />
         <p>Stay informed about our community events</p>

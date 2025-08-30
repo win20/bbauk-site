@@ -59,7 +59,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="bg-background px-6 py-16 text-gray-950">
+    <section className="bg-background px-6 py-16 text-gray-950 md:px-26">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Image Gallery" tag="" />
       </FadeInWrapper>

@@ -37,7 +37,7 @@ export default function EventCard({
           src={image}
           alt={title}
           width="w-full"
-          height="h-54"
+          height="h-54 md:h-72"
           objectPosition="center"
           priority={priority}
           quality={80}
@@ -71,7 +71,7 @@ export default function EventCard({
         <CroppedImage
           src={image}
           alt={`Image for update: ${title}`}
-          height="h-[220px]"
+          height="h-[220px] md:h-80"
           className="mt-6 rounded-md"
           objectPosition="60%"
         />
