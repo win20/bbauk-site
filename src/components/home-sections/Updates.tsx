@@ -28,13 +28,13 @@ export default function Updates() {
   ];
 
   return (
-    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 md:px-26">
+    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 sm:px-[15%]">
       <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Latest News and Updates" tag="Updates" />
         <p>Stay informed about our community events</p>
       </FadeInWrapper>
 
-      <div className="mt-4">
+      <div className="mt-4 sm:w-[550px]">
         {updates.map((update) => (
           <FadeInWrapper key={update.id} delay={200} duration="normal">
             <EventCard

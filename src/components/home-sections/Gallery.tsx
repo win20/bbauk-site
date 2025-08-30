@@ -59,7 +59,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="bg-background px-6 py-16 text-gray-950 md:px-26">
+    <section className="bg-background px-6 py-16 text-gray-950 sm:px-26">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Image Gallery" tag="" />
       </FadeInWrapper>
@@ -80,9 +80,9 @@ export default function Gallery() {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-2 sm:-ml-4">
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:basis-1/2 md:pl-4 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 sm:basis-1/2 sm:pl-4 lg:basis-1/3">
                 <div className="h-64 overflow-hidden rounded-lg">
                   <CroppedImage
                     src={image.src}

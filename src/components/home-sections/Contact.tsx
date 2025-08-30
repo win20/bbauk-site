@@ -16,12 +16,12 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="bg-neutral-darker text-neutral-200 md:px-26"
+      className="bg-neutral-darker text-neutral-200 sm:px-26"
     >
-      <div className="mx-auto max-w-5xl py-20 md:py-28">
+      <div className="mx-auto max-w-5xl py-20 sm:py-28">
         <FadeInWrapper>
           <HeadingWithTag tag="Connect" heading="Contact Us" />
-          <p className="mt-6 text-lg text-neutral-300 md:text-xl">
+          <p className="mt-6 text-lg text-neutral-300 sm:text-xl">
             We would love to hear from you!
           </p>
         </FadeInWrapper>
@@ -29,7 +29,7 @@ export default function Contact() {
         <div className="mt-12 space-y-14">
           <FadeInWrapper delay={0.05}>
             <OutlinedEnvelope width={40} className="text-foreground-inverse" />
-            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse md:text-3xl">Email</h3>
+            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse sm:text-3xl">Email</h3>
             <div className="mt-2 space-y-3">
               <a
                 href={`mailto:${EMAIL}`}
@@ -42,7 +42,7 @@ export default function Contact() {
 
           <FadeInWrapper delay={0.1}>
             <OutlinedTelephone width={40} className="text-foreground-inverse" />
-            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse md:text-3xl">Phone</h3>
+            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse sm:text-3xl">Phone</h3>
             <p className="mt-2 text-neutral-300">Call us anytime!</p>
             <a
               href={`tel:${PHONE_TEL}`}
@@ -54,7 +54,7 @@ export default function Contact() {
 
           <FadeInWrapper delay={0.15}>
             <OutlinedMapMarker width={42} className="text-foreground-inverse" />
-            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse md:text-3xl">Office</h3>
+            <h3 className="mt-4 font-serif text-2xl text-foreground-inverse sm:text-3xl">Office</h3>
             <p className="mt-2">{ADDRESS}</p>
             <a
               href={MAPS_URL}

@@ -32,13 +32,13 @@ const events = [
 
 export default function Upcoming() {
   return (
-    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 md:px-26">
+    <section className="flex w-full flex-col items-center bg-capecod-lighter px-6 py-16 text-gray-950 sm:px-26">
       <FadeInWrapper className="text-center">
         <HeadingWithTag heading="Events" tag="Upcoming" />
         <p>Join us for these upcoming events organised by our community</p>
       </FadeInWrapper>
 
-      <div className="mt-8 flex w-full flex-col gap-6">
+      <div className="mt-8 flex w-full flex-col gap-6 sm:w-[550px]">
         {events.map((event, idx) => (
           <FadeInWrapper key={event.title} delay={idx * 100} duration="normal">
             <EventCard

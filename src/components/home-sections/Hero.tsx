@@ -7,7 +7,7 @@ import FadeInWrapper from "components/shared/FadeInWrapper";
 export default function Hero() {
   return (
     <section className="w-full bg-capecod text-white">
-      <div className="px-6 py-16 md:px-26">
+      <div className="px-6 py-16 sm:px-[15%] sm:py-26">
         <div className="mx-auto max-w-4xl space-y-6 text-left">
           <FadeInWrapper delay={0} as="h1" className="font-merriweather text-4xl font-bold">
             Our Story
@@ -37,7 +37,7 @@ export default function Hero() {
           delay={300}
           threshold={0.3}
           duration="slow"
-          className="absolute top-3 left-4 z-10 text-sm text-white md:top-8 md:left-26"
+          className="absolute top-3 left-4 z-10 text-sm text-white sm:top-8 sm:left-[15%]"
         >
           <p className="pb-1 font-bold">Next Event</p>
           <p>Katina Ceremony &middot; 14 April &middot; Plaistow Temple</p>
@@ -45,7 +45,7 @@ export default function Hero() {
         <CroppedImage
           src="/hero-buddha.jpg"
           alt="Hero Image"
-          height="h-[380px] md:h-[450px] lg:h-96"
+          height="h-[380px] sm:h-[520px] lg:h-96"
           objectPosition="60%"
           priority
         />

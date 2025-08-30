@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       {/* Navigation bar */}
       <div
-        className={`relative flex items-center justify-between px-6 py-5 text-foreground-inverse transition-all duration-500 ease-out md:py-6 ${
+        className={`relative flex items-center justify-between px-6 py-5 text-foreground-inverse transition-all duration-500 ease-out sm:px-[15%] sm:py-6 ${
           isScrolled ? "translate-y-0 opacity-100" : "translate-y-2 opacity-85"
         }`}
       >
@@ -50,12 +50,12 @@ export default function Navbar() {
           }}
         />
 
-        <span className="font-poppins text-sm leading-none font-extrabold tracking-wide md:pl-20">
+        <span className="font-poppins text-sm leading-none font-extrabold tracking-wide">
           Bangladesh Buddhist Association UK
         </span>
 
         <button
-          className="text-3xl focus:outline-none md:pr-20 lg:hidden"
+          className="text-3xl focus:outline-none lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(!open)}
         >
@@ -91,7 +91,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out md:px-20 md:pb-16 lg:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out sm:px-20 sm:pb-16 lg:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"
