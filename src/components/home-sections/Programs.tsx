@@ -23,7 +23,7 @@ export default function Programs() {
   ];
 
   return (
-    <section className="bg-neutral-lightest px-6 py-16 text-gray-950 sm:px-[15%]">
+    <section className="bg-neutral-lightest px-6 py-16 text-gray-950 sm:px-[15%] sm:py-32">
       <FadeInWrapper delay={0}>
         <HeadingWithTag heading="Programs and Services" tag="Services" />
       </FadeInWrapper>
