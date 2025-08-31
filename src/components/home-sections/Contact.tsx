@@ -16,7 +16,7 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="bg-neutral-darker text-neutral-200 sm:px-26"
+      className="bg-neutral-darker px-6 text-neutral-200 sm:px-26"
     >
       <div className="mx-auto max-w-5xl py-20 sm:py-28">
         <FadeInWrapper>
