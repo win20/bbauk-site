@@ -37,7 +37,7 @@ export default function EventCard({
           src={image}
           alt={title}
           width="w-full"
-          height="h-54 sm:h-80"
+          height="h-54 sm:h-70"
           objectPosition="center"
           priority={priority}
           quality={80}
@@ -67,7 +67,7 @@ export default function EventCard({
 
   if (isUpdate) {
     return (
-      <div className="mb-10">
+      <div>
         <CroppedImage
           src={image}
           alt={`Image for update: ${title}`}

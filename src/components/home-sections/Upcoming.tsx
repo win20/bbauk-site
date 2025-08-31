@@ -38,7 +38,7 @@ export default function Upcoming() {
         <p>Join us for these upcoming events organised by our community</p>
       </FadeInWrapper>
 
-      <div className="mt-8 flex w-full flex-col gap-6 sm:px-[5%]">
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:px-[5%]">
         {events.map((event, idx) => (
           <FadeInWrapper key={event.title} delay={idx * 100} duration="normal">
             <EventCard
