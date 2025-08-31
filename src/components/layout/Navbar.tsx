@@ -91,12 +91,12 @@ export default function Navbar() {
 
       {/* Mobile dropdown nav */}
       <nav
-        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out sm:px-20 sm:pb-16 lg:hidden ${
+        className={`absolute top-full right-0 left-0 z-50 flex flex-col bg-capecod px-6 pb-8 text-foreground-inverse shadow-lg transition-all duration-300 ease-in-out sm:px-[15%] sm:pb-16 lg:hidden ${
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-4 opacity-0"
         }`}
         aria-label="Mobile navigation"
       >
-        <ul className="flex flex-col gap-8 px-6 pt-8">
+        <ul className="flex flex-col gap-8 pt-8">
           {navLinks.map((link, index) => (
             <li
               key={link.label}
