@@ -34,7 +34,7 @@ export default function Updates() {
         <p>Stay informed about our community events</p>
       </FadeInWrapper>
 
-      <div className="mt-4 sm:px-[5%]">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:px-[5%]">
         {updates.map((update) => (
           <FadeInWrapper key={update.id} delay={200} duration="normal">
             <EventCard
